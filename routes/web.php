@@ -1,8 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
-/*
+Route::get('/redirect/{sevice}', function ($service) {
+    return Socialite::driver($service)->redirect();
+});
+
+Route::get('/callback', function () {
+    $user = Socialite::driver('facebook')->user();
+
+    // $user->token
+});
+/* 
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -25,6 +35,8 @@ use Illuminate\Support\Facades\Route;
 // {
 //     return view('front/index');
 // });
+
+
 
 
 

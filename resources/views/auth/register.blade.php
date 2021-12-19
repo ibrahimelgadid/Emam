@@ -63,9 +63,15 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Register') }}
                                 </button>
+                            </div>
+
+                            <hr>
+                            <div class="col-md-6 offset-md-4 mt-4">
+                                <a href="{{url('redirect/google')}}" class="btn btn-block btn-danger">Login with Google</a>
+                                <a href="{{url('redirect/facebook')}}" class="btn btn-block btn-primary">Login with Facebook</a>
                             </div>
                         </div>
                     </form>
